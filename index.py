@@ -13,7 +13,7 @@ sys.setdefaultencoding('utf-8')
 import requests
 
 auth_refresh_url = ''
-sckey = ""
+sckey = ''
 
 ftqq_url = "https://sc.ftqq.com/%s.send"%(sckey)
 url1 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=hierarchical_task_system&cmd=2'
