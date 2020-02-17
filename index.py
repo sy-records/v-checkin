@@ -27,6 +27,9 @@ login_headers = {
 login = requests.get(auth_refresh_url, headers=login_headers)
 cookie = requests.utils.dict_from_cookiejar(login.cookies)
 
+if not cookie:
+    print "auth_refresh error"
+
 sign_headers = {
     'Cookie': 'tvfe_boss_uuid=***********; pgv_pvid=***************; video_guid=***************; video_platform=2; pgv_info=ssid=****************; pgv_pvi=****************; pgv_si=***************; _qpsvr_localtk=*************; ptisp=; ptui_loginuin=***************; RK=****************; ptcz=*********************; main_login=qq; vqq_access_token=************; vqq_appid=101483052; vqq_openid=*************; vqq_vuserid=*************; vqq_vusession=' + cookie['vqq_vusession'] + ';'
 }
