@@ -14,7 +14,7 @@
 
 1. 电脑打开浏览器访问`v.qq.com`，打开控制台(`F12`)、切换到Network，找到`https://access.video.qq.com/user/auth_refresh`的接口，把`Request URL:`后的地址都复制一下，填写到脚本的`auth_refresh_url`中，如：
 
-![获取auth_refresh接口](images/get-auth_refresh.png)
+![获取auth_refresh接口](https://cdn.jsdelivr.net/gh/sy-records/v-checkin@master/images/get-auth_refresh.png)
 
 ```python
 auth_refresh_url = 'https://access.video.qq.com/user/auth_refresh?vappid=11059694&vsecret=********&type=qq&g_tk=&g_vstk=********&g_actk=********&callback=jQuery191048649********_1575435********4&_=1575435********'
@@ -24,7 +24,7 @@ auth_refresh_url = 'https://access.video.qq.com/user/auth_refresh?vappid=1105969
 
 2. 还是`auth_refresh`这个接口，复制`Request Header`中的`cookie`，填写到脚本的`login_headers`的`Cookie`中
 
-![获取cookie](images/get-cookie.png)
+![获取cookie](https://cdn.jsdelivr.net/gh/sy-records/v-checkin@master/images/get-cookie.png)
 
 ```python
 login_headers = {
@@ -60,11 +60,11 @@ sign_headers = {
 1. 单击左侧导航栏【函数服务】，进入“函数服务”页面。
 2. 在页面上方选择一个地域，最好选择离你常用地区近点的，不至于导致账号异常。单击【新建】。如下图所示：
 
-![](images/Serverless-1.png)
+![](https://cdn.jsdelivr.net/gh/sy-records/v-checkin@master/images/Serverless-1.png)
 
 3. 在“新建函数”页面填写函数基础信息，单击【下一步】。如下图所示：
 
-![](images/Serverless-2.png)
+![](https://cdn.jsdelivr.net/gh/sy-records/v-checkin@master/images/Serverless-2.png)
 
 * 函数名称：可以自定义，比如为 `v_checkin`。
 * 运行环境：选择 “Python 2.7”。
@@ -72,7 +72,7 @@ sign_headers = {
 
 4. 填写描述，复制刚才修改好的脚本`index.py`内容到下面的代码框中，并单击【完成】。如下图所示：
 
-![](images/Serverless-3.png)
+![](https://cdn.jsdelivr.net/gh/sy-records/v-checkin@master/images/Serverless-3.png)
 
 函数创建完成后，自动进入创建成功函数的“函数配置”页面，可查看该云函数的函数配置信息。
 
@@ -82,7 +82,7 @@ sign_headers = {
 
 1. 在已创建函数的详情页面，选择【触发方式】，并单击【添加触发方式】。如下图所示：
 
-![](images/Serverless-4.png)
+![](https://cdn.jsdelivr.net/gh/sy-records/v-checkin@master/images/Serverless-4.png)
 
 * 触发方式：选择 “定时触发”。
 * 触发周期：选择 “自定义触发周期”。
@@ -92,4 +92,6 @@ sign_headers = {
 
 ## License
 
-MIT
+[MIT](LICENSE)
+
+本项目仅用于学习、研究用途，由使用人自行承担因此引发的一切法律责任，作者不承担法律责任。
