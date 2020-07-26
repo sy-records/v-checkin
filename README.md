@@ -10,9 +10,9 @@
 * 需要一台有`Python2`环境的`Linux`服务器或者使用[腾讯云Serverless](https://console.cloud.tencent.com/scf)
 > 用来定时执行脚本
 
-* 获取Cookie
+## 获取Cookie
 
-1. 电脑打开浏览器访问`v.qq.com`，打开控制台(`F12`)、切换到Network，找到`https://access.video.qq.com/user/auth_refresh`的接口，把`Request URL:`后的地址都复制一下，填写到脚本的`auth_refresh_url`中，如：
+1. 电脑打开浏览器访问`v.qq.com`，打开控制台(`F12`)、切换到Network，找到 `https://access.video.qq.com/user/auth_refresh` 的接口，把`Request URL:`后的地址都复制一下，填写到脚本的`auth_refresh_url`中，如：
 
 ![获取auth_refresh接口](https://cdn.jsdelivr.net/gh/sy-records/v-checkin@master/images/get-auth_refresh.png)
 
@@ -34,6 +34,8 @@ login_headers = {
 ```
 
 3. 重复第二步，粘贴到脚本中的`sign_headers`的`Cookie`中，注意修改`vqq_vusession`，变量`cookie['vqq_vusession']`需要保留不要替换
+
+> 说明：等于把第二步中获取到的`Cookie`的`vqq_vusession=dzsfo;`放到末尾，并且修改为`vqq_vusession=`
 
 ```python
 sign_headers = {
